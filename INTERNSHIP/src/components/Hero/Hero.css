@@ -1,0 +1,58 @@
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, #2a2018 0%, #18140f 100%),
+    url('https://picsum.photos/seed/emberoak/1600/1000') center/cover no-repeat;
+  background-blend-mode: multiply;
+  color: var(--color-cream);
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.hero.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(24, 20, 15, 0.85) 0%, rgba(24, 20, 15, 0.4) 100%);
+}
+
+.hero__content {
+  position: relative;
+  max-width: 680px;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 4.2rem);
+  line-height: 1.1;
+  margin-bottom: 1.2rem;
+}
+
+.hero__text {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  max-width: 520px;
+  margin-bottom: 2.2rem;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
