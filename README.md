@@ -52,7 +52,7 @@ The primary focus is on the Home Page, which includes an engaging Hero Section, 
 ## 📁 Project Structure
 
 ```text
-restaurant-website/
+INTERNSHIP/
 ├── public/
 │   └── images/
 ├── src/
