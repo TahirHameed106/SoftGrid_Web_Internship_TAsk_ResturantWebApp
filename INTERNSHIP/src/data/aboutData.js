@@ -19,7 +19,7 @@ export const team = [
     id: 2,
     name: 'Priya Suresh',
     role: 'Head Pastry Chef',
-    bio: 'Priya's desserts are edible art — each plate is built around a single seasonal ingredient pushed to its limit.',
+    bio: 'Priya\'s desserts are edible art — each plate is built around a single seasonal ingredient pushed to its limit.',
     avatar: 'https://i.pravatar.cc/300?img=47',
   },
   {
