@@ -1,4 +1,26 @@
 // src/data/menuItems.js
+const BASE = import.meta.env.BASE_URL;
+
+export const Dishesimages = {
+  'Crispy Chicken Strips': `${BASE}/images/Crispy Chicken Strips.jpg`,
+  'Loaded Fries': `${BASE}/images/Loaded Fries.jpg`,
+  'Spicy Fish Wrap': `${BASE}/images/Spicy Fish Wrap.jpg`,
+  'Smoked Brisket Platter': `${BASE}/images/Smoked Brisket Platter.jpg`,
+  'BBQ Ribs Half Rack': `${BASE}/images/BBQ Ribs Half Rack.jpg`,
+  'Charred Korean Wings': `${BASE}/images/Charred Korean Wings.jpg`,
+    'Wood-Fired Margherita': `${BASE}/images/Wood-Fired Margherita.jpg`,
+    'Ember Pepperoni': `${BASE}/images/Ember Pepperoni.jpg`,
+    'Truffle Bianca': `${BASE}/images/Truffle Bianca.jpg`,
+    'The Oak Classic': `${BASE}/images/The Oak Classic.jpg`,
+    'Truffle Mushroom Burger': `${BASE}/images/Truffle Mushroom Burger.jpg`,
+    'Crispy Chicken Burger': `${BASE}/images/Crispy Chicken Burger.jpg`,
+    'Ember Lemonade': `${BASE}/images/Ember Lemonade.jpg`,
+    'Mango Chili Cooler': `${BASE}/images/Mango Chili Cooler.jpg`,
+    'Cold Brew Oak Blend': `${BASE}/images/Cold Brew Oak Blend.jpg`,
+    'Salted Caramel Tart': `${BASE}/images/Salted Caramel Tart.jpg`,
+    'Smoked Vanilla Panna Cotta': `${BASE}/images/Smoked Vanilla Panna Cotta.jpg`,
+    'Warm Brownie Stack': `${BASE}/images/Warm Brownie Stack.jpg`
+};
 
 export const categories = ['All', 'Fast Food', 'BBQ', 'Pizza', 'Burgers', 'Drinks', 'Desserts'];
 
@@ -11,7 +33,7 @@ export const menuItems = [
     price: '8.50',
     category: 'Fast Food',
     badge: 'Best Seller',
-    image: 'https://picsum.photos/seed/strips/500/380',
+    image: Dishesimages['Crispy Chicken Strips'] ?? fallbackImage('Crispy Chicken Strips'),
   },
   {
     id: 2,
@@ -20,7 +42,7 @@ export const menuItems = [
     price: '6.75',
     category: 'Fast Food',
     badge: null,
-    image: 'https://picsum.photos/seed/fries2/500/380',
+    image: Dishesimages['Loaded Fries'] ?? fallbackImage('Loaded Fries'),
   },
   {
     id: 3,
@@ -29,7 +51,7 @@ export const menuItems = [
     price: '9.00',
     category: 'Fast Food',
     badge: 'New',
-    image: 'https://picsum.photos/seed/fishwrap/500/380',
+    image: Dishesimages['Spicy Fish Wrap'] ?? fallbackImage('Spicy Fish Wrap'),
   },
 
   // ── BBQ ────────────────────────────────────────────────────
@@ -40,7 +62,7 @@ export const menuItems = [
     price: '14.50',
     category: 'BBQ',
     badge: 'Chef\'s Pick',
-    image: 'https://picsum.photos/seed/brisket/500/380',
+    image: Dishesimages['Smoked Brisket Platter'] ?? fallbackImage('Smoked Brisket Platter'),
   },
   {
     id: 5,
@@ -49,7 +71,7 @@ export const menuItems = [
     price: '17.00',
     category: 'BBQ',
     badge: null,
-    image: 'https://picsum.photos/seed/ribs/500/380',
+    image: Dishesimages['BBQ Ribs Half Rack'] ?? fallbackImage('BBQ Ribs Half Rack'),
   },
   {
     id: 6,
@@ -58,7 +80,7 @@ export const menuItems = [
     price: '9.50',
     category: 'BBQ',
     badge: 'Spicy',
-    image: 'https://picsum.photos/seed/wings/500/380',
+    image: Dishesimages['Charred Korean Wings'] ?? fallbackImage('Charred Korean Wings'),
   },
 
   // ── Pizza ──────────────────────────────────────────────────
@@ -69,7 +91,7 @@ export const menuItems = [
     price: '11.00',
     category: 'Pizza',
     badge: 'Classic',
-    image: 'https://picsum.photos/seed/margherita/500/380',
+    image: Dishesimages['Wood-Fired Margherita'] ?? fallbackImage('Wood-Fired Margherita'),
   },
   {
     id: 8,
@@ -78,7 +100,7 @@ export const menuItems = [
     price: '12.50',
     category: 'Pizza',
     badge: 'Best Seller',
-    image: 'https://picsum.photos/seed/pepperoni/500/380',
+    image: Dishesimages['Ember Pepperoni'] ?? fallbackImage('Ember Pepperoni'),
   },
   {
     id: 9,
@@ -87,7 +109,7 @@ export const menuItems = [
     price: '14.00',
     category: 'Pizza',
     badge: 'Premium',
-    image: 'https://picsum.photos/seed/trufflep/500/380',
+    image: Dishesimages['Truffle Bianca'] ?? fallbackImage('Truffle Bianca'),
   },
 
   // ── Burgers ────────────────────────────────────────────────
@@ -98,7 +120,7 @@ export const menuItems = [
     price: '10.50',
     category: 'Burgers',
     badge: null,
-    image: 'https://picsum.photos/seed/classicburger/500/380',
+    image: Dishesimages['The Oak Classic'] ?? fallbackImage('The Oak Classic'),
   },
   {
     id: 11,
@@ -107,7 +129,7 @@ export const menuItems = [
     price: '12.75',
     category: 'Burgers',
     badge: 'Chef\'s Pick',
-    image: 'https://picsum.photos/seed/burger/500/380',
+    image: Dishesimages['Truffle Mushroom Burger'] ?? fallbackImage('Truffle Mushroom Burger'),
   },
   {
     id: 12,
@@ -116,7 +138,7 @@ export const menuItems = [
     price: '11.00',
     category: 'Burgers',
     badge: 'New',
-    image: 'https://picsum.photos/seed/chickburger/500/380',
+    image: Dishesimages['Crispy Chicken Burger'] ?? fallbackImage('Crispy Chicken Burger'),
   },
 
   // ── Drinks ─────────────────────────────────────────────────
@@ -127,7 +149,7 @@ export const menuItems = [
     price: '4.50',
     category: 'Drinks',
     badge: 'Signature',
-    image: 'https://picsum.photos/seed/lemonade/500/380',
+    image: Dishesimages['Ember Lemonade'] ?? fallbackImage('Ember Lemonade'),
   },
   {
     id: 14,
@@ -136,7 +158,7 @@ export const menuItems = [
     price: '5.25',
     category: 'Drinks',
     badge: 'Spicy',
-    image: 'https://picsum.photos/seed/mangochill/500/380',
+    image: Dishesimages['Mango Chili Cooler'] ?? fallbackImage('Mango Chili Cooler'),
   },
   {
     id: 15,
@@ -145,7 +167,7 @@ export const menuItems = [
     price: '5.50',
     category: 'Drinks',
     badge: null,
-    image: 'https://picsum.photos/seed/coldbrew/500/380',
+    image: Dishesimages['Cold Brew Oak Blend'] ?? fallbackImage('Cold Brew Oak Blend'),
   },
 
   // ── Desserts ───────────────────────────────────────────────
@@ -156,7 +178,7 @@ export const menuItems = [
     price: '7.25',
     category: 'Desserts',
     badge: 'Best Seller',
-    image: 'https://picsum.photos/seed/tart/500/380',
+    image: Dishesimages['Salted Caramel Tart'] ?? fallbackImage('Salted Caramel Tart'),
   },
   {
     id: 17,
@@ -165,7 +187,7 @@ export const menuItems = [
     price: '6.50',
     category: 'Desserts',
     badge: 'New',
-    image: 'https://picsum.photos/seed/pannacotta/500/380',
+    image: Dishesimages['Smoked Vanilla Panna Cotta'] ?? fallbackImage('Smoked Vanilla Panna Cotta'),
   },
   {
     id: 18,
@@ -174,6 +196,6 @@ export const menuItems = [
     price: '7.75',
     category: 'Desserts',
     badge: null,
-    image: 'https://picsum.photos/seed/brownie/500/380',
+    image: Dishesimages['Warm Brownie Stack'] ?? fallbackImage('Warm Brownie Stack'),
   },
 ];

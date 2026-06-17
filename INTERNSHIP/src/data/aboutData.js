@@ -1,4 +1,5 @@
 // src/data/aboutData.js
+const BASE = import.meta.env.BASE_URL;
 
 export const stats = [
   { id: 1, value: 12,   suffix: '+', label: 'Years of Service' },
@@ -10,39 +11,65 @@ export const stats = [
 export const team = [
   {
     id: 1,
-    name: 'Marcus Holt',
+    name: 'Tahir Hameed',
     role: 'Executive Chef & Co-Founder',
-    bio: 'Trained in Lyon, Marcus brings two Michelin-star experience back home to fire-cooked comfort food.',
-    avatar: 'https://i.pravatar.cc/300?img=11',
+    bio: 'Trained in Lyon, Tahir brings two Michelin-star experience back home to fire-cooked comfort food.',
+    avatar: `${BASE}images/teams/tahir.jpg`,
   },
   {
     id: 2,
-    name: 'Priya Suresh',
+    name: 'Sarah Syed',
     role: 'Head Pastry Chef',
-    bio: 'Priya\'s desserts are edible art — each plate is built around a single seasonal ingredient pushed to its limit.',
-    avatar: 'https://i.pravatar.cc/300?img=47',
+    bio: 'Sarah\'s desserts are edible art.',
+    avatar: `${BASE}images/teams/sarah.jpg`,
   },
   {
     id: 3,
-    name: 'James Okafor',
+    name: 'Hamzi Khan',
     role: 'Pit Master & BBQ Lead',
-    bio: 'James has been smoking meats for 15 years. His brisket technique is the reason guests keep coming back.',
-    avatar: 'https://i.pravatar.cc/300?img=15',
+    bio: 'Hamzi has been smoking meats for 15 years.',
+    avatar: `${BASE}images/teams/hamzi.jpg`,
   },
   {
     id: 4,
-    name: 'Sofia Leung',
+    name: 'Javaria Khan',
     role: 'Restaurant Manager',
-    bio: 'Sofia shapes the guest experience from arrival to dessert — warm, precise, and genuinely caring.',
-    avatar: 'https://i.pravatar.cc/300?img=32',
+    bio: 'Javaria shapes the guest experience.',
+    avatar: `${BASE}images/teams/javaria.jpg`,
   },
 ];
 
+
+
 export const galleryImages = [
-  { id: 1, src: 'https://picsum.photos/seed/restaurant1/600/450', alt: 'Dining room interior' },
-  { id: 2, src: 'https://picsum.photos/seed/kitchen1/600/450',    alt: 'Open kitchen with live fire' },
-  { id: 3, src: 'https://picsum.photos/seed/dish1/600/450',       alt: 'Signature brisket platter' },
-  { id: 4, src: 'https://picsum.photos/seed/restaurant2/600/450', alt: 'Outdoor terrace seating' },
-  { id: 5, src: 'https://picsum.photos/seed/dish2/600/450',       alt: 'Wood-fired pizza' },
-  { id: 6, src: 'https://picsum.photos/seed/kitchen2/600/450',    alt: 'Chef at the wood oven' },
+  {
+    id: 1,
+    src: `${BASE}images/Resturent/dining-room.jpg`,
+    alt: 'Dining room interior',
+  },
+  {
+    id: 2,
+    src: `${BASE}images/Resturent/kitchen-fire.jpg`,
+    alt: 'Open kitchen with live fire',
+  },
+  {
+    id: 3,
+    src: `${BASE}images/Resturent/brisket-platter.jpg`,
+    alt: 'Signature brisket platter',
+  },
+  {
+    id: 4,
+    src: `${BASE}images/Resturent/terrace.jpg`,
+    alt: 'Outdoor terrace seating',
+  },
+  {
+    id: 5,
+    src: `${BASE}images/Resturent/pizza.jpg`,
+    alt: 'Wood-fired pizza',
+  },
+  {
+    id: 6,
+    src: `${BASE}images/Resturent/chef-oven.jpg`,
+    alt: 'Chef at the wood oven',
+  },
 ];

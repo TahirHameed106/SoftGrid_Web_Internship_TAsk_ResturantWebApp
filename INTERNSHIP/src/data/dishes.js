@@ -1,10 +1,13 @@
-const dishImages = {
-  "Smoked Brisket Platter": "/images/Smoked%20Brisket%20Platter.jpg",
-  "Wood-Fired Margherita": "/images/Wood-Fired%20Margherita.jpg",
-  "Charred Korean BBQ Wings": "/images/Charred%20Korean%20BBQ%20Wings.jpg",
-  "Truffle Mushroom Burger": "/images/Truffle%20Mushroom%20Burger.jpg",
-  "Citrus Glazed Salmon": "/images/Citrus%20Glazed%20Salmon.jpg",
-  "Salted Caramel Tart": "/images/Salted%20Caramel%20Tart.jpg"
+
+const BASE = import.meta.env.BASE_URL;
+
+export const dishImages = {
+  "Smoked Brisket Platter": `${BASE}/images/Smoked Brisket Platter.jpg`,
+  "Wood-Fired Margherita": `${BASE}/images/Wood-Fired Margherita.jpg`,
+  "Charred Korean BBQ Wings": `${BASE}/images/Charred Korean BBQ Wings.jpg`,
+  "Truffle Mushroom Burger": `${BASE}/images/Truffle Mushroom Burger.jpg`,
+  "Citrus Glazed Salmon": `${BASE}/images/Citrus Glazed Salmon.jpg`,
+  "Salted Caramel Tart": `${BASE}/images/Salted Caramel Tart.jpg`
 };
 
 const fallbackImage = (name) => {
