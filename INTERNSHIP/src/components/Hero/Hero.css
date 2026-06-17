@@ -34,13 +34,27 @@
   font-size: clamp(2.5rem, 6vw, 4.2rem);
   line-height: 1.1;
   margin-bottom: 1.2rem;
+  color: var(--color-hero-text);
 }
 
 .hero__text {
   font-size: 1.05rem;
-  color: var(--color-text-muted);
+  color: rgba(246, 241, 231, 0.82);
   max-width: 520px;
   margin-bottom: 2.2rem;
+}
+
+.hero .eyebrow {
+  color: var(--color-gold);
+}
+
+.hero__actions .btn-outline {
+  border-color: rgba(246, 241, 231, 0.2);
+  color: var(--color-hero-text);
+}
+
+.hero__actions .btn-outline:hover {
+  background: rgba(246, 241, 231, 0.08);
 }
 
 .hero__actions {
