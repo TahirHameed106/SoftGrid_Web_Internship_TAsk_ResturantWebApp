@@ -2,6 +2,27 @@
 
 A modern, responsive Restaurant Website built using React, HTML, CSS, and JavaScript as part of the SoftGrid Web Internship Task.
 
+
+🔥 Ember & Oak — Restaurant Website
+A fully responsive, modern restaurant website built with React + Vite.
+
+⚡ Quick Start
+
+bash# 1. Create Vite project
+npm create vite@latest restaurant-website -- --template react
+cd restaurant-website
+
+# 2. Install dependencies
+npm install react-router-dom
+
+# 3. Replace src/ with the provided files
+# Replace index.css, App.jsx, main.jsx
+# Add all folders: pages/, components/, context/, data/, hooks/
+
+# 4. Run
+npm run dev
+
+
 ## 📌 Project Overview
 
 This project is a frontend-only restaurant website designed to showcase modern UI/UX principles, responsive layouts, reusable React components, and clean code architecture.
@@ -14,29 +35,42 @@ The website consists of four main pages:
 * Contact
 
 The primary focus is on the Home Page, which includes an engaging Hero Section, Featured Dishes, Why Choose Us section, Testimonials, and a responsive Footer.
+ ---> OtherFeatures :
+✅ Dark Mode
+✅ Food Search
+✅ Menu Filtering
+✅ Scroll Animations
+✅ Back to Top Button
+✅ Image Gallery (Lightbox)
 
 ---
 
-## 🚀 Features
+## 🚀 ✅ Features Implemented
 
-### Home Page
 
-* Responsive Navbar with active links
-* Mobile hamburger menu
-* Hero section with call-to-action buttons
-* Featured dishes section powered by static data
-* Why Choose Us section with icons
-* Customer testimonials section
-* Responsive footer
+4 Pages: Home, Menu, About, Contact
+--Dark / Light Mode with localStorage persistence
 
-### Bonus Features
+--Menu Search — live filter by name/description
+--Menu Category Filtering — pill buttons per category
 
-* Dark Mode Toggle
-* Scroll Animations
-* Back To Top Button
-* Testimonial Carousel
+--Scroll Animations — every section fades in on scroll
+--Animated Stats Counter — numbers count up when visible
+--Image Gallery + Lightbox — click to enlarge on About page
+--Contact Form Validation — live errors on blur, full check on submit
+
+--Back to Top Button — appears after 400px scroll
+--Fully Responsive — 375px → 1440px+
 
 ---
+ ---
+🎨 Design Tokens (in index.css)
+
+  Token                      Light           Dark           --color-bg                 #faf8f4         #18140f
+  --color-gold               #c9952a         #d4a24e
+  --color-ember              #a6402f         #c05540
+  --color-sage               #6b8f5a         #8fa677
+ ---
 
 ## 🛠️ Tech Stack
 
@@ -55,27 +89,36 @@ The primary focus is on the Home Page, which includes an engaging Hero Section, 
 INTERNSHIP/
 ├── public/
 │   └── images/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   │   ├── Navbar/
-│   │   ├── Footer/
-│   │   ├── Hero/
-│   │   ├── FeaturedDishes/
-│   │   ├── WhyChooseUs/
-│   │   ├── Testimonials/
-│   │   └── Button/
-│   ├── pages/
-│   │   ├── Home.jsx
-│   │   ├── Menu.jsx
-│   │   ├── About.jsx
-│   │   └── Contact.jsx
-│   ├── data/
-│   │   ├── dishes.js
-│   │   └── testimonials.js
-│   ├── styles/
-│   ├── App.jsx
-│   └── main.jsx
+src/
+├── context/
+│   └── ThemeContext.jsx        ← Dark/Light mode
+├── components/
+│   ├── Navbar/
+│   │   ├── Navbar.jsx        ← Responsive navigation bar
+│   │   └── Navbar.css
+│   ├── Footer/
+│   │   ├── Footer.jsx        ← Responsive footer
+│   │   └── Footer.css
+│   └── BackToTop/
+│       ├── BackToTop.jsx   ← Back to top button (icon click 
+|                                                       scrolls to top)
+│       └── BackToTop.css
+├── pages/
+│   ├── Home.jsx                ← (from Day 1)
+│   ├── Menu.jsx  + Menu.css      ← (from Day 2)
+│   ├── About.jsx + About.css    ← (from Day 3)
+│   └── Contact.jsx + Contact.css  ← (from Day 4)
+├── data/
+│   ├── dishes.js               ← Featured dishes (Home)
+│   ├── menuItems.js            ← Full menu data
+│   ├── testimonials.js         ← Customer reviews
+│   └── aboutData.js            ← Team, stats, gallery
+├── hooks/
+│   ├── useScrollReveal.js      ← Scroll-triggered animations
+│   └── useCounter.js           ← Animated number counter
+├── App.jsx
+├── main.jsx
+└── index.css                   ← All design tokens + global styles
 ```
 
 ---
