@@ -285,8 +285,19 @@
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  flex-shrink: 0;
+  justify-content: center;
 }
+.reservation-cta .btn-outline {
+  border: 2px solid var(--color-cream);
+  color: var(--color-cream);
+  background: transparent;
+}
+
+.reservation-cta .btn-outline:hover {
+  background: var(--color-cream);
+  color: #18140f; /* dark text */
+}
+
 
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 1024px) {
@@ -296,5 +307,9 @@
 @media (max-width: 640px) {
   .form-row { grid-template-columns: 1fr; }
   .reservation-cta__inner { flex-direction: column; text-align: center; }
-  .reservation-cta__actions { justify-content: center; }
+  .reservation-cta__actions {  width: 100%;
+    flex-direction: column; }
+    .reservation-cta__actions .btn {
+    width: 100%;
+  }
 }

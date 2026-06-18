@@ -43,20 +43,22 @@
 }
 
 .footer__socials a {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: var(--color-surface);
-  color: var(--color-cream);
-  transition: background var(--transition), color var(--transition);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  transition: all var(--transition);
 }
 
 .footer__socials a:hover {
   background: var(--color-gold);
-  color: var(--color-bg);
+  color: #18140f;
+  transform: translateY(-3px);
 }
 
 .footer__bottom {
@@ -64,7 +66,14 @@
   font-size: 0.85rem;
   padding-top: 1.5rem;
 }
+[data-theme="dark"] .footer {
+  background: #110e09;
+}
 
+[data-theme="dark"] .footer__brand,
+[data-theme="dark"] .footer__col h4 {
+  color: var(--color-cream);
+}
 @media (max-width: 768px) {
   .footer__grid {
     grid-template-columns: 1fr;
