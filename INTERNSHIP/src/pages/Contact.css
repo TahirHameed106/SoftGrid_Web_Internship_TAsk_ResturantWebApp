@@ -1,0 +1,300 @@
+/* src/pages/Contact.css */
+
+/* ── Header ──────────────────────────────────────────────── */
+.contact-header {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.contact-header.is-visible { opacity: 1; transform: translateY(0); }
+
+/* ── Body grid ───────────────────────────────────────────── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* ── Info side ───────────────────────────────────────────── */
+.contact-info__heading,
+.contact-form-wrap__heading {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: var(--color-text);
+}
+
+.contact-info__intro {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.info-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.info-item__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-bg-soft);
+  border: 1.5px solid var(--color-border);
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.info-item:hover .info-item__icon {
+  background: var(--color-gold);
+  color: #18140f;
+  border-color: var(--color-gold);
+}
+
+.info-item__label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 0.15rem;
+}
+
+.info-item__value {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+/* Map */
+.contact-map {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  height: 240px;
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  filter: grayscale(0.3);
+  transition: filter var(--transition);
+}
+
+.contact-map:hover iframe { filter: grayscale(0); }
+
+/* ── Form side ───────────────────────────────────────────── */
+.contact-form-wrap__heading { margin-bottom: 1.8rem; }
+
+/* Form layout */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+}
+
+/* Form group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-group label span[aria-hidden] {
+  color: var(--color-ember);
+}
+
+.char-count {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+/* Inputs & textarea */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--color-text-sub);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px rgba(201,149,42,0.15);
+}
+
+/* Validation states */
+.form-group.has-error input,
+.form-group.has-error textarea {
+  border-color: var(--color-ember);
+  box-shadow: 0 0 0 3px rgba(166,64,47,0.12);
+}
+
+.form-group.has-success input,
+.form-group.has-success textarea {
+  border-color: var(--color-sage);
+}
+
+.field-error {
+  font-size: 0.82rem;
+  color: var(--color-ember);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  animation: shake 0.35s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25%       { transform: translateX(-4px); }
+  75%       { transform: translateX(4px); }
+}
+
+/* Submit button */
+.form-submit {
+  width: 100%;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1rem;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.form-submit.is-loading {
+  opacity: 0.85;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(24,20,15,0.25);
+  border-top-color: #18140f;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Success state */
+.form-success {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--color-bg-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  animation: successIn 0.5s ease;
+}
+
+@keyframes successIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.form-success__icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(107,143,90,0.15);
+  color: var(--color-sage);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.2rem;
+}
+
+.form-success h3 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.form-success p {
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* ── Reservation CTA ─────────────────────────────────────── */
+.reservation-cta {
+  background: var(--color-hero-bg);
+  padding: clamp(3.5rem, 6vw, 5rem) 0;
+}
+
+.reservation-cta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.reservation-cta__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+}
+
+@media (max-width: 640px) {
+  .form-row { grid-template-columns: 1fr; }
+  .reservation-cta__inner { flex-direction: column; text-align: center; }
+  .reservation-cta__actions { justify-content: center; }
+}
