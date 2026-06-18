@@ -157,7 +157,7 @@ export default function Contact() {
                   </svg>
                 }
                 label="Email"
-                value="hello@emberandoak.com"
+                value="Tahirdev@emberandoak.com"
               />
               <InfoItem
                 icon={

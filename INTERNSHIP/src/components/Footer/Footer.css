@@ -1,7 +1,8 @@
 .footer {
-  background: var(--color-bg);
+  background: var(--color-bg-soft);
   color: var(--color-text-muted);
   padding: 4rem 0 1.5rem;
+  transition: background .3s ease, color .3s ease;
 }
 
 .footer__grid {
@@ -9,18 +10,18 @@
   grid-template-columns: 2fr 1fr 1fr;
   gap: 2.5rem;
   padding-bottom: 2.5rem;
-  border-bottom: 1px solid rgba(246, 241, 231, 0.08);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .footer__brand {
   font-family: var(--font-display);
-  color: var(--color-cream);
+  color: var(--color-text);
   font-size: 1.4rem;
   margin-bottom: 0.8rem;
 }
 
 .footer__col h4 {
-  color: var(--color-cream);
+  color: var(--color-text);
   font-family: var(--font-display);
   font-size: 1.05rem;
   margin-bottom: 1rem;
@@ -48,7 +49,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(246, 241, 231, 0.06);
+  background: var(--color-surface);
   color: var(--color-cream);
   transition: background var(--transition), color var(--transition);
 }
