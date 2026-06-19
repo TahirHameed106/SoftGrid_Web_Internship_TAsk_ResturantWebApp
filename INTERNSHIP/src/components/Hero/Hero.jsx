@@ -1,3 +1,7 @@
+import { Link } from 'react-router-dom';
+import useScrollReveal from '../../hooks/useScrollReveal';
+import './Hero.css';
+
 export default function Hero() {
   const [ref, visible] = useScrollReveal();
 
