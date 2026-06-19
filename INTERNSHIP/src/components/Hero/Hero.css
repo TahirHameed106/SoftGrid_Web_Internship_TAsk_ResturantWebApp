@@ -3,8 +3,18 @@
   min-height: 90vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(180deg, #2a2018 0%, #18140f 100%),
-    url('https://picsum.photos/seed/emberoak/1600/1000') center/cover no-repeat;
+  .hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: var(--color-cream);
+
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
   background-blend-mode: multiply;
   color: var(--color-cream);
   opacity: 0;
